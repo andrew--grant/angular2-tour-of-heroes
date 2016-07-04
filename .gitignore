@@ -39,3 +39,9 @@ jspm_packages
 
 # Don't version node modules
 node_modules/
+
+
+# Mac junk
+.DS_Store
+
+#todo: consider http://chaseadams.io/2015/07/my-gitignore-conventions/

@@ -77,8 +77,7 @@ export class AppComponent {
   selectedHero: Hero;
   public heroes = HEROES;
   onSelect(hero: Hero) { this.selectedHero = hero; }
-}
-
+} 
 
 
 const HEROES: Hero[] = [
