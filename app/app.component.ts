@@ -14,10 +14,9 @@ export class Hero {
                 <input [(ngModel)]="selectedHero.name" placeholder="name"/>
             </div>
           </div>
-
           <h2>My Heroes</h2>
           <ul class="heroes">
-            <li *ngFor="let hero of heroes" (click)="onSelect(hero)">
+            <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero" [class.fred]="1===3">
               <span class="badge">{{hero.id}}</span> {{hero.name}}
             </li>
           </ul>
