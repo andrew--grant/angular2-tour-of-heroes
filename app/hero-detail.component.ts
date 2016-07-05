@@ -18,3 +18,4 @@ export class HeroDetailComponent {
     @Input()
     hero: Hero;
 }
+//services here?

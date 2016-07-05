@@ -72,7 +72,7 @@ const HEROES: Hero[] = [
           border-radius: 4px 0 0 4px;
         }`
   ],
-  directives: [HeroDetailComponent] 
+  directives: [HeroDetailComponent]
 })
 export class AppComponent {
   title = 'Tour of Heroes';
