@@ -1,5 +1,19 @@
 import { Component } from '@angular/core';
 import { Hero } from './hero';
+import { HeroDetailComponent } from './hero-detail.component';
+
+const HEROES: Hero[] = [
+  { id: 11, name: 'Mr. Nice' },
+  { id: 12, name: 'Narco' },
+  { id: 13, name: 'Bombasto' },
+  { id: 14, name: 'Celeritas' },
+  { id: 15, name: 'Magneta' },
+  { id: 16, name: 'RubberMan' },
+  { id: 17, name: 'Dynama' },
+  { id: 18, name: 'Dr IQ' },
+  { id: 19, name: 'Magma' },
+  { id: 20, name: 'Tornado' }
+];
 
 @Component({
   selector: 'my-app',
@@ -8,7 +22,8 @@ import { Hero } from './hero';
             <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero" [class.fred]="1===3">
               <span class="badge">{{hero.id}}</span> {{hero.name}}
             </li>
-          </ul>`,
+          </ul>
+          <my-hero-detail [hero]="selectedHero"></my-hero-detail>`,
   styles: [`.selected {
           background-color: #CFD8DC !important;
           color: white;
@@ -56,8 +71,8 @@ import { Hero } from './hero';
           margin-right: .8em;
           border-radius: 4px 0 0 4px;
         }`
-  ]
-
+  ],
+  directives: [HeroDetailComponent] 
 })
 export class AppComponent {
   title = 'Tour of Heroes';
@@ -65,17 +80,3 @@ export class AppComponent {
   public heroes = HEROES;
   onSelect(hero: Hero) { this.selectedHero = hero; }
 } 
-
-
-const HEROES: Hero[] = [
-  { id: 11, name: 'Mr. Nice' },
-  { id: 12, name: 'Narco' },
-  { id: 13, name: 'Bombasto' },
-  { id: 14, name: 'Celeritas' },
-  { id: 15, name: 'Magneta' },
-  { id: 16, name: 'RubberMan' },
-  { id: 17, name: 'Dynama' },
-  { id: 18, name: 'Dr IQ' },
-  { id: 19, name: 'Magma' },
-  { id: 20, name: 'Tornado' }
-];
