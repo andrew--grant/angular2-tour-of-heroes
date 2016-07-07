@@ -37,6 +37,12 @@ button:disabled {
   color: #aaa;
   cursor: auto;
 }
+.error {color:red;}
+button.delete-button{
+  float:right;
+  background-color: gray !important;
+  color:white;
+}
 
 /* Navigation link styles */
 nav a {
@@ -140,3 +146,4 @@ nav a.active {
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+
